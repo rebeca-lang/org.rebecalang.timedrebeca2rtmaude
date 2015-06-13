@@ -1,0 +1,34 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude 2.6 built: Dec  9 2010 18:40:31
+	    Copyright 1997-2010 SRI International
+		   Sat Feb 21 16:36:05 2015
+
+	     Full Maude 2.3 `(February 12th`, 2007`)
+
+	  Real-Time Maude 2.3 extension February 4, 2010
+
+rewrites: 154 in 4ms cpu (1ms real) (38500 rewrites/second)
+
+	     Full Maude 2.3 `(February 12th`, 2007`)
+
+	  Real-Time Maude 2.3 TCTL Model Checker extension April 19, 2013
+
+rewrites: 233039 in 276ms cpu (278ms real) (844289 rewrites/second)
+
+Introduced timed module: AFRA
+
+rewrites: 73520 in 80ms cpu (82ms real) (918942 rewrites/second)
+
+Introduced timed module: MODEL-CHECK-AFRA
+
+rewrites: 72592 in 192ms cpu (190ms real) (378059 rewrites/second)
+
+Untimed model check initState |=u <> "c2" hasReceived Customer--ticketIssued in
+    MODEL-CHECK-AFRA with mode deterministic time increase
+
+Result Bool :
+  true
+
+Bye.

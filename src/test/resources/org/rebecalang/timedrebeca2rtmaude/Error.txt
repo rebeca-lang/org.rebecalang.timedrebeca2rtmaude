@@ -1,0 +1,23 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude 2.6 built: Dec  9 2010 18:40:31
+	    Copyright 1997-2010 SRI International
+		   Tue Jan 13 15:27:28 2015
+
+	     Full Maude 2.3 `(February 12th`, 2007`)
+
+	  Real-Time Maude 2.3 extension February 4, 2010
+
+rewrites: 149272 in 400ms cpu (398ms real) (373156 rewrites/second)
+
+Introduced timed module: AFRA
+
+rewrites: 32656 in 40ms cpu (41ms real) (816359 rewrites/second)
+
+Introduced timed module: MODEL-CHECK-AFRA
+
+rewrites: 17 in 4ms cpu (1ms real) (4248 rewrites/second)
+Error: Ambiguous input.
+
+Bye.

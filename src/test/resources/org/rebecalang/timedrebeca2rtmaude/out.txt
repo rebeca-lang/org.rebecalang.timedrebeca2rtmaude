@@ -1,0 +1,1501 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude 2.6 built: Dec  9 2010 18:40:31
+	    Copyright 1997-2010 SRI International
+		   Sat Feb 21 16:29:06 2015
+
+	     Full Maude 2.3 `(February 12th`, 2007`)
+
+	  Real-Time Maude 2.3 extension February 4, 2010
+
+rewrites: 154 in 0ms cpu (1ms real) (~ rewrites/second)
+
+	     Full Maude 2.3 `(February 12th`, 2007`)
+
+	  Real-Time Maude 2.3 TCTL Model Checker extension April 19, 2013
+
+rewrites: 233039 in 280ms cpu (278ms real) (832228 rewrites/second)
+
+Introduced timed module: AFRA
+
+rewrites: 73520 in 84ms cpu (82ms real) (875186 rewrites/second)
+
+Introduced timed module: MODEL-CHECK-AFRA
+
+rewrites: 21815 in 476ms cpu (477ms real) (45826 rewrites/second)
+
+Model check initState |=t <> "a" hasReceived Agent--ticketIssued with
+    TicketService-id |-> 2 in MODEL-CHECK-AFRA in time < 100 with mode
+    deterministic time increase
+
+Result ModelCheckResult :
+  counterexample({{< "a" : Rebec | queue : constructor with emptyValuation from
+    "GOD" deadline 1000000,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent >
+    < "c1" : Rebec | queue : constructor with Customer-myId |-> 1 from "GOD"
+    deadline 1000000,stateVars :((Customer-id |-> 0)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : constructor with Customer-myId |-> 2 from "GOD" deadline 1000000,
+    stateVars :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute
+    : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > <
+    "ts" : Rebec | queue : constructor with TicketService-myIssueDelay |-> 4
+    from "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 0,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")(self
+    |-> "a")sender |-> "GOD"),toExecute : removeVars(sender |-> "GOD"),zclassID
+    : Agent > < "c1" : Rebec | queue : constructor with Customer-myId |-> 1
+    from "GOD" deadline 1000000,stateVars :((Customer-id |-> 0)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : constructor with Customer-myId |-> 2 from "GOD" deadline
+    1000000,stateVars :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : constructor with TicketService-myIssueDelay
+    |-> 4 from "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |->
+    0)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 0,'exec}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue :
+    constructor with Customer-myId |-> 1 from "GOD" deadline 1000000,stateVars
+    :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : constructor
+    with Customer-myId |-> 2 from "GOD" deadline 1000000,stateVars :((
+    Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 0,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 0)(Customer-myId |-> 1)(Customer-a |->
+    "a")(self |-> "c1")sender |-> "GOD"),toExecute :((Customer-id :=
+    Customer-myId);(send Customer--try with noArg to self deadline 1000000
+    after 0); removeVars((Customer-myId |-> 1)sender |-> "GOD")),zclassID :
+    Customer > < "c2" : Rebec | queue : constructor with Customer-myId |-> 2
+    from "GOD" deadline 1000000,stateVars :((Customer-id |-> 0)(Customer-a |->
+    "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen"
+    : IdGen | nextId : 0 > < "ts" : Rebec | queue : constructor with
+    TicketService-myIssueDelay |-> 4 from "GOD" deadline 1000000,stateVars :((
+    TicketService-issueDelay |-> 0)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 0,'exec}{{<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : constructor with Customer-myId |-> 2
+    from "GOD" deadline 1000000,stateVars :((Customer-id |-> 0)(Customer-a |->
+    "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen"
+    : IdGen | nextId : 0 > < "ts" : Rebec | queue : constructor with
+    TicketService-myIssueDelay |-> 4 from "GOD" deadline 1000000,stateVars :((
+    TicketService-issueDelay |-> 0)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Customer--try with
+    emptyValuation from "c1" to "c1" deadline 1000000} in time 0,'readMessage}{
+    {< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : Customer--try with emptyValuation from
+    "c1" deadline 1000000,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : constructor with Customer-myId |-> 2 from "GOD" deadline
+    1000000,stateVars :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : constructor with TicketService-myIssueDelay
+    |-> 4 from "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |->
+    0)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 0,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")(self |->
+    "c1")sender |-> "c1"),toExecute :((send Agent--requestTicket with arg(
+    Customer-id)to Customer-a deadline 1000000 after 0); removeVars(sender |->
+    "c1")),zclassID : Customer > < "c2" : Rebec | queue : constructor with
+    Customer-myId |-> 2 from "GOD" deadline 1000000,stateVars :((Customer-id
+    |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID
+    : Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    constructor with TicketService-myIssueDelay |-> 4 from "GOD" deadline
+    1000000,stateVars :((TicketService-issueDelay |-> 0)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : constructor
+    with Customer-myId |-> 2 from "GOD" deadline 1000000,stateVars :((
+    Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Agent--requestTicket with Agent-id |-> 1 from "c1" to "a"
+    deadline 1000000} in time 0,'readMessage}{{< "a" : Rebec | queue :
+    Agent--requestTicket with Agent-id |-> 1 from "c1" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    constructor with Customer-myId |-> 2 from "GOD" deadline 1000000,stateVars
+    :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 0,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-id |-> 1)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts
+    |-> "ts")(self |-> "a")sender |-> "c1"),toExecute :((send
+    TicketService--requestTicket with arg(Agent-id)to Agent-ts deadline 200
+    after 0); removeVars((Agent-id |-> 1)sender |-> "c1")),zclassID : Agent > <
+    "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : constructor with Customer-myId |-> 2 from "GOD" deadline
+    1000000,stateVars :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : constructor with TicketService-myIssueDelay
+    |-> 4 from "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |->
+    0)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 0,'exec}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : constructor
+    with Customer-myId |-> 2 from "GOD" deadline 1000000,stateVars :((
+    Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000,stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > TicketService--requestTicket with TicketService-id |-> 1
+    from "a" to "ts" deadline 200} in time 0,'readMessage}{{< "a" : Rebec |
+    queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : constructor with Customer-myId |-> 2 from "GOD" deadline 1000000,
+    stateVars :((Customer-id |-> 0)(Customer-a |-> "a")self |-> "c2"),toExecute
+    : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > <
+    "ts" : Rebec | queue :((constructor with TicketService-myIssueDelay |-> 4
+    from "GOD" deadline 1000000):: TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200),stateVars :((
+    TicketService-issueDelay |-> 0)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 0,
+    'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 0)(Customer-myId |-> 2)(Customer-a |-> "a")(self |->
+    "c2")sender |-> "GOD"),toExecute :((Customer-id := Customer-myId);(send
+    Customer--try with noArg to self deadline 1000000 after 0); removeVars((
+    Customer-myId |-> 2)sender |-> "GOD")),zclassID : Customer > < "idgen" :
+    IdGen | nextId : 0 > < "ts" : Rebec | queue :((constructor with
+    TicketService-myIssueDelay |-> 4 from "GOD" deadline 1000000)::
+    TicketService--requestTicket with TicketService-id |-> 1 from "a" deadline
+    200),stateVars :((TicketService-issueDelay |-> 0)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue :((constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000):: TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200),stateVars :((
+    TicketService-issueDelay |-> 0)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Customer--try with
+    emptyValuation from "c2" to "c2" deadline 1000000} in time 0,'readMessage}{
+    {< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : Customer--try with emptyValuation from
+    "c2" deadline 1000000,stateVars :((Customer-id |-> 2)(Customer-a |->
+    "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen"
+    : IdGen | nextId : 0 > < "ts" : Rebec | queue :((constructor with
+    TicketService-myIssueDelay |-> 4 from "GOD" deadline 1000000)::
+    TicketService--requestTicket with TicketService-id |-> 1 from "a" deadline
+    200),stateVars :((TicketService-issueDelay |-> 0)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")(self |-> "c2")sender |-> "c2"),
+    toExecute :((send Agent--requestTicket with arg(Customer-id)to Customer-a
+    deadline 1000000 after 0); removeVars(sender |-> "c2")),zclassID : Customer
+    > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :((constructor
+    with TicketService-myIssueDelay |-> 4 from "GOD" deadline 1000000)::
+    TicketService--requestTicket with TicketService-id |-> 1 from "a" deadline
+    200),stateVars :((TicketService-issueDelay |-> 0)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue :((constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000):: TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200),stateVars :((
+    TicketService-issueDelay |-> 0)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Agent--requestTicket
+    with Agent-id |-> 2 from "c2" to "a" deadline 1000000} in time 0,
+    'readMessage}{{< "a" : Rebec | queue : Agent--requestTicket with Agent-id
+    |-> 2 from "c2" deadline 1000000,stateVars :((Agent-c1 |-> "c1")(Agent-c2
+    |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID
+    : Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :((
+    constructor with TicketService-myIssueDelay |-> 4 from "GOD" deadline
+    1000000):: TicketService--requestTicket with TicketService-id |-> 1 from
+    "a" deadline 200),stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 0,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-id |-> 2)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts
+    |-> "ts")(self |-> "a")sender |-> "c2"),toExecute :((send
+    TicketService--requestTicket with arg(Agent-id)to Agent-ts deadline 200
+    after 0); removeVars((Agent-id |-> 2)sender |-> "c2")),zclassID : Agent > <
+    "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue :((constructor with
+    TicketService-myIssueDelay |-> 4 from "GOD" deadline 1000000)::
+    TicketService--requestTicket with TicketService-id |-> 1 from "a" deadline
+    200),stateVars :((TicketService-issueDelay |-> 0)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue :((constructor with TicketService-myIssueDelay |-> 4 from
+    "GOD" deadline 1000000):: TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200),stateVars :((
+    TicketService-issueDelay |-> 0)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" to "ts"
+    deadline 200} in time 0,'readMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue :((constructor with TicketService-myIssueDelay
+    |-> 4 from "GOD" deadline 1000000)::(TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200)::
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    200),stateVars :((TicketService-issueDelay |-> 0)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue :((TicketService--requestTicket with TicketService-id |-> 1
+    from "a" deadline 200):: TicketService--requestTicket with TicketService-id
+    |-> 2 from "a" deadline 200),stateVars :((TicketService-issueDelay |-> 0)(
+    TicketService-myIssueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "GOD"),toExecute :((TicketService-issueDelay :=
+    TicketService-myIssueDelay); removeVars((TicketService-myIssueDelay |->
+    4)sender |-> "GOD")),zclassID : TicketService >} in time 0,'exec}{{< "a" :
+    Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent >
+    < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue :((TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200)::
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    200),stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 0,'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(TicketService-issueDelay);(send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 1)sender |-> "a")),
+    zclassID : TicketService >} in time 0,'delayExpression}{{< "a" : Rebec |
+    queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(4);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 0,'tick}{{< "a" : Rebec | queue : nil,stateVars :(
+    (Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 196,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 4,'end-delay}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 196,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :((send Agent--ticketIssued with arg(
+    TicketService-id)to TicketService-a deadline 1000000 after 0); removeVars((
+    TicketService-id |-> 1)sender |-> "a")),zclassID : TicketService >} in time
+    4,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 196,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Agent--ticketIssued with Agent-id |-> 1 from "ts" to "a"
+    deadline 1000000} in time 4,'readMessage}{{< "a" : Rebec | queue :
+    Agent--ticketIssued with Agent-id |-> 1 from "ts" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 196,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 4,
+    'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-id |-> 1)(
+    Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")(self |->
+    "a")sender |-> "ts"),toExecute :((if Agent-id = 1 then send
+    Customer--ticketIssued with noArg to Agent-c1 deadline 1000000 after 0 else
+    send Customer--ticketIssued with noArg to Agent-c2 deadline 1000000 after
+    0); removeVars((Agent-id |-> 1)sender |-> "ts")),zclassID : Agent > < "c1"
+    : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 196,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 4,'exec}{{<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    196,stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >
+    Customer--ticketIssued with emptyValuation from "a" to "c1" deadline
+    1000000} in time 4,'readMessage}{{< "a" : Rebec | queue : nil,stateVars :((
+    Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue :
+    Customer--ticketIssued with emptyValuation from "a" deadline 1000000,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 196,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 4,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")(self |->
+    "c1")sender |-> "a"),toExecute :((send Customer--try with noArg to self
+    deadline 1000000 after 30); removeVars(sender |-> "a")),zclassID : Customer
+    > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a
+    |-> "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > <
+    "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    196,stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 4,'exec}{{delayedMsg(Customer--try with emptyValuation from "c1" to
+    "c1" deadline 1000000,30)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 196,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 4,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 1000000,30)< "a" : Rebec | queue
+    : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id |->
+    2)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(TicketService-issueDelay);(send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 2)sender |-> "a")),
+    zclassID : TicketService >} in time 4,'delayExpression}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 1000000,30)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :(delay(
+    4);(send Agent--ticketIssued with arg(TicketService-id)to TicketService-a
+    deadline 1000000 after 0); removeVars((TicketService-id |-> 2)sender |->
+    "a")),zclassID : TicketService >} in time 4,'tick}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 999996,26)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :(delay(
+    0);(send Agent--ticketIssued with arg(TicketService-id)to TicketService-a
+    deadline 1000000 after 0); removeVars((TicketService-id |-> 2)sender |->
+    "a")),zclassID : TicketService >} in time 8,'end-delay}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 999996,26)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :((send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 2)sender |-> "a")),
+    zclassID : TicketService >} in time 8,'exec}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Agent--ticketIssued
+    with Agent-id |-> 2 from "ts" to "a" deadline 1000000} in time 8,
+    'readMessage}{{delayedMsg(Customer--try with emptyValuation from "c1" to
+    "c1" deadline 999996,26)< "a" : Rebec | queue : Agent--ticketIssued with
+    Agent-id |-> 2 from "ts" deadline 1000000,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 8,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-id |-> 2)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")(self |-> "a")sender |-> "ts"),toExecute :((if Agent-id =
+    1 then send Customer--ticketIssued with noArg to Agent-c1 deadline 1000000
+    after 0 else send Customer--ticketIssued with noArg to Agent-c2 deadline
+    1000000 after 0); removeVars((Agent-id |-> 2)sender |-> "ts")),zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self
+    |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in time 8,
+    'exec}{{delayedMsg(Customer--try with emptyValuation from "c1" to "c1"
+    deadline 999996,26)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Customer--ticketIssued with emptyValuation from "a" to "c2"
+    deadline 1000000} in time 8,'readMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : Customer--ticketIssued with emptyValuation from "a" deadline
+    1000000,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-issueDelay |->
+    4)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 8,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")(self |->
+    "c2")sender |-> "a"),toExecute :((send Customer--try with noArg to self
+    deadline 1000000 after 30); removeVars(sender |-> "a")),zclassID : Customer
+    > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars
+    :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 8,'exec}{{
+    delayedMsg(Customer--try with emptyValuation from "c1" to "c1" deadline
+    999996,26)delayedMsg(Customer--try with emptyValuation from "c2" to "c2"
+    deadline 1000000,30)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 8,'tick}{{delayedMsg(Customer--try with
+    emptyValuation from "c2" to "c2" deadline 999974,4)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999970} in time 34,'readMessage}{
+    {delayedMsg(Customer--try with emptyValuation from "c2" to "c2" deadline
+    999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : Customer--try with
+    emptyValuation from "c1" deadline 999970,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self
+    |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in time 34,
+    'takeMessage}{{delayedMsg(Customer--try with emptyValuation from "c2" to
+    "c2" deadline 999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")(self |-> "c1")sender |-> "c1"),
+    toExecute :((send Agent--requestTicket with arg(Customer-id)to Customer-a
+    deadline 1000000 after 0); removeVars(sender |-> "c1")),zclassID : Customer
+    > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a
+    |-> "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > <
+    "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 34,'exec}{{
+    delayedMsg(Customer--try with emptyValuation from "c2" to "c2" deadline
+    999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Agent--requestTicket with Agent-id |-> 1 from "c1" to "a"
+    deadline 1000000} in time 34,'readMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c2" to "c2" deadline 999974,4)< "a" : Rebec | queue :
+    Agent--requestTicket with Agent-id |-> 1 from "c1" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-issueDelay |->
+    4)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 34,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c2" to "c2" deadline 999974,4)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-id |-> 1)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")(self |-> "a")sender |-> "c1"),toExecute :((send
+    TicketService--requestTicket with arg(Agent-id)to Agent-ts deadline 200
+    after 0); removeVars((Agent-id |-> 1)sender |-> "c1")),zclassID : Agent > <
+    "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 34,'exec}{{
+    delayedMsg(Customer--try with emptyValuation from "c2" to "c2" deadline
+    999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > TicketService--requestTicket with TicketService-id |-> 1
+    from "a" to "ts" deadline 200} in time 34,'readMessage}{{delayedMsg(
+    Customer--try with emptyValuation from "c2" to "c2" deadline 999974,4)< "a"
+    : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent >
+    < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 34,
+    'takeMessage}{{delayedMsg(Customer--try with emptyValuation from "c2" to
+    "c2" deadline 999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(TicketService-issueDelay);(send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 1)sender |-> "a")),
+    zclassID : TicketService >} in time 34,'delayExpression}{{delayedMsg(
+    Customer--try with emptyValuation from "c2" to "c2" deadline 999974,4)< "a"
+    : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent >
+    < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(4);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 34,'tick}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService > Customer--try with emptyValuation from "c2" to "c2"
+    deadline 999970} in time 38,'readMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    Customer--try with emptyValuation from "c2" deadline 999970,stateVars :((
+    Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 38,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")(self |->
+    "c2")sender |-> "c2"),toExecute :((send Agent--requestTicket with arg(
+    Customer-id)to Customer-a deadline 1000000 after 0); removeVars(sender |->
+    "c2")),zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts" :
+    Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 38,'exec}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService > Agent--requestTicket with Agent-id |-> 2 from "c2" to "a"
+    deadline 1000000} in time 38,'readMessage}{{< "a" : Rebec | queue :
+    Agent--requestTicket with Agent-id |-> 2 from "c2" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 38,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-id |-> 2)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts
+    |-> "ts")(self |-> "a")sender |-> "c2"),toExecute :((send
+    TicketService--requestTicket with arg(Agent-id)to Agent-ts deadline 200
+    after 0); removeVars((Agent-id |-> 2)sender |-> "c2")),zclassID : Agent > <
+    "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 38,'exec}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService > TicketService--requestTicket with TicketService-id |-> 2
+    from "a" to "ts" deadline 200} in time 38,'readMessage}{{< "a" : Rebec |
+    queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 38,'end-delay}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :((send Agent--ticketIssued with arg(
+    TicketService-id)to TicketService-a deadline 1000000 after 0); removeVars((
+    TicketService-id |-> 1)sender |-> "a")),zclassID : TicketService >} in time
+    38,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Agent--ticketIssued with Agent-id |-> 1 from "ts" to "a"
+    deadline 1000000} in time 38,'readMessage}{{< "a" : Rebec | queue :
+    Agent--ticketIssued with Agent-id |-> 1 from "ts" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 38,
+    'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-id |-> 1)(
+    Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")(self |->
+    "a")sender |-> "ts"),toExecute :((if Agent-id = 1 then send
+    Customer--ticketIssued with noArg to Agent-c1 deadline 1000000 after 0 else
+    send Customer--ticketIssued with noArg to Agent-c2 deadline 1000000 after
+    0); removeVars((Agent-id |-> 1)sender |-> "ts")),zclassID : Agent > < "c1"
+    : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 38,'exec}{{<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    200,stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >
+    Customer--ticketIssued with emptyValuation from "a" to "c1" deadline
+    1000000} in time 38,'readMessage}{{< "a" : Rebec | queue : nil,stateVars :(
+    (Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue :
+    Customer--ticketIssued with emptyValuation from "a" deadline 1000000,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 38,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")(self |->
+    "c1")sender |-> "a"),toExecute :((send Customer--try with noArg to self
+    deadline 1000000 after 30); removeVars(sender |-> "a")),zclassID : Customer
+    > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a
+    |-> "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > <
+    "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    200,stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 38,'exec}{{delayedMsg(Customer--try with emptyValuation from "c1" to
+    "c1" deadline 1000000,30)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 38,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 1000000,30)< "a" : Rebec | queue
+    : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id |->
+    2)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(TicketService-issueDelay);(send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 2)sender |-> "a")),
+    zclassID : TicketService >} in time 38,'delayExpression}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 1000000,30)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :(delay(
+    4);(send Agent--ticketIssued with arg(TicketService-id)to TicketService-a
+    deadline 1000000 after 0); removeVars((TicketService-id |-> 2)sender |->
+    "a")),zclassID : TicketService >} in time 38,'tick}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 999996,26)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :(delay(
+    0);(send Agent--ticketIssued with arg(TicketService-id)to TicketService-a
+    deadline 1000000 after 0); removeVars((TicketService-id |-> 2)sender |->
+    "a")),zclassID : TicketService >} in time 42,'end-delay}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 999996,26)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :((send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 2)sender |-> "a")),
+    zclassID : TicketService >} in time 42,'exec}{{delayedMsg(Customer--try
+    with emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec |
+    queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Agent--ticketIssued
+    with Agent-id |-> 2 from "ts" to "a" deadline 1000000} in time 42,
+    'readMessage}{{delayedMsg(Customer--try with emptyValuation from "c1" to
+    "c1" deadline 999996,26)< "a" : Rebec | queue : Agent--ticketIssued with
+    Agent-id |-> 2 from "ts" deadline 1000000,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 42,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-id |-> 2)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")(self |-> "a")sender |-> "ts"),toExecute :((if Agent-id =
+    1 then send Customer--ticketIssued with noArg to Agent-c1 deadline 1000000
+    after 0 else send Customer--ticketIssued with noArg to Agent-c2 deadline
+    1000000 after 0); removeVars((Agent-id |-> 2)sender |-> "ts")),zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self
+    |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in time 42,
+    'exec}{{delayedMsg(Customer--try with emptyValuation from "c1" to "c1"
+    deadline 999996,26)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Customer--ticketIssued with emptyValuation from "a" to "c2"
+    deadline 1000000} in time 42,'readMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : Customer--ticketIssued with emptyValuation from "a" deadline
+    1000000,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-issueDelay |->
+    4)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 42,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")(self |->
+    "c2")sender |-> "a"),toExecute :((send Customer--try with noArg to self
+    deadline 1000000 after 30); removeVars(sender |-> "a")),zclassID : Customer
+    > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars
+    :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 42,'exec}{{
+    delayedMsg(Customer--try with emptyValuation from "c1" to "c1" deadline
+    999996,26)delayedMsg(Customer--try with emptyValuation from "c2" to "c2"
+    deadline 1000000,30)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 42,'tick}{{delayedMsg(Customer--try with
+    emptyValuation from "c2" to "c2" deadline 999974,4)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999970} in time 68,'readMessage}{
+    {delayedMsg(Customer--try with emptyValuation from "c2" to "c2" deadline
+    999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : Customer--try with
+    emptyValuation from "c1" deadline 999970,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self
+    |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in time 68,
+    'takeMessage}{{delayedMsg(Customer--try with emptyValuation from "c2" to
+    "c2" deadline 999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")(self |-> "c1")sender |-> "c1"),
+    toExecute :((send Agent--requestTicket with arg(Customer-id)to Customer-a
+    deadline 1000000 after 0); removeVars(sender |-> "c1")),zclassID : Customer
+    > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a
+    |-> "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > <
+    "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 68,'exec}{{
+    delayedMsg(Customer--try with emptyValuation from "c2" to "c2" deadline
+    999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Agent--requestTicket with Agent-id |-> 1 from "c1" to "a"
+    deadline 1000000} in time 68,'readMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c2" to "c2" deadline 999974,4)< "a" : Rebec | queue :
+    Agent--requestTicket with Agent-id |-> 1 from "c1" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-issueDelay |->
+    4)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 68,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c2" to "c2" deadline 999974,4)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-id |-> 1)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")(self |-> "a")sender |-> "c1"),toExecute :((send
+    TicketService--requestTicket with arg(Agent-id)to Agent-ts deadline 200
+    after 0); removeVars((Agent-id |-> 1)sender |-> "c1")),zclassID : Agent > <
+    "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 68,'exec}{{
+    delayedMsg(Customer--try with emptyValuation from "c2" to "c2" deadline
+    999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > TicketService--requestTicket with TicketService-id |-> 1
+    from "a" to "ts" deadline 200} in time 68,'readMessage}{{delayedMsg(
+    Customer--try with emptyValuation from "c2" to "c2" deadline 999974,4)< "a"
+    : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent >
+    < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 1 from "a" deadline 200,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 68,
+    'takeMessage}{{delayedMsg(Customer--try with emptyValuation from "c2" to
+    "c2" deadline 999974,4)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(TicketService-issueDelay);(send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 1)sender |-> "a")),
+    zclassID : TicketService >} in time 68,'delayExpression}{{delayedMsg(
+    Customer--try with emptyValuation from "c2" to "c2" deadline 999974,4)< "a"
+    : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent >
+    < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(4);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 68,'tick}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService > Customer--try with emptyValuation from "c2" to "c2"
+    deadline 999970} in time 72,'readMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    Customer--try with emptyValuation from "c2" deadline 999970,stateVars :((
+    Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 72,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")(self |->
+    "c2")sender |-> "c2"),toExecute :((send Agent--requestTicket with arg(
+    Customer-id)to Customer-a deadline 1000000 after 0); removeVars(sender |->
+    "c2")),zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts" :
+    Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 72,'exec}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService > Agent--requestTicket with Agent-id |-> 2 from "c2" to "a"
+    deadline 1000000} in time 72,'readMessage}{{< "a" : Rebec | queue :
+    Agent--requestTicket with Agent-id |-> 2 from "c2" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 72,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-id |-> 2)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts
+    |-> "ts")(self |-> "a")sender |-> "c2"),toExecute :((send
+    TicketService--requestTicket with arg(Agent-id)to Agent-ts deadline 200
+    after 0); removeVars((Agent-id |-> 2)sender |-> "c2")),zclassID : Agent > <
+    "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 72,'exec}{{< "a" : Rebec | queue : nil,stateVars
+    :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-id |-> 1)(
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService > TicketService--requestTicket with TicketService-id |-> 2
+    from "a" to "ts" deadline 200} in time 72,'readMessage}{{< "a" : Rebec |
+    queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(0);(send Agent--ticketIssued with
+    arg(TicketService-id)to TicketService-a deadline 1000000 after 0);
+    removeVars((TicketService-id |-> 1)sender |-> "a")),zclassID :
+    TicketService >} in time 72,'end-delay}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((TicketService-id
+    |-> 1)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :((send Agent--ticketIssued with arg(
+    TicketService-id)to TicketService-a deadline 1000000 after 0); removeVars((
+    TicketService-id |-> 1)sender |-> "a")),zclassID : TicketService >} in time
+    72,'exec}{{< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Agent--ticketIssued with Agent-id |-> 1 from "ts" to "a"
+    deadline 1000000} in time 72,'readMessage}{{< "a" : Rebec | queue :
+    Agent--ticketIssued with Agent-id |-> 1 from "ts" deadline 1000000,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),
+    toExecute : noStatements,zclassID : Customer > < "c2" : Rebec | queue :
+    nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 72,
+    'takeMessage}{{< "a" : Rebec | queue : nil,stateVars :((Agent-id |-> 1)(
+    Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")(self |->
+    "a")sender |-> "ts"),toExecute :((if Agent-id = 1 then send
+    Customer--ticketIssued with noArg to Agent-c1 deadline 1000000 after 0 else
+    send Customer--ticketIssued with noArg to Agent-c2 deadline 1000000 after
+    0); removeVars((Agent-id |-> 1)sender |-> "ts")),zclassID : Agent > < "c1"
+    : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |->
+    "a")self |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self
+    |-> "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen
+    | nextId : 0 > < "ts" : Rebec | queue : TicketService--requestTicket with
+    TicketService-id |-> 2 from "a" deadline 200,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 72,'exec}{{<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    200,stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >
+    Customer--ticketIssued with emptyValuation from "a" to "c1" deadline
+    1000000} in time 72,'readMessage}{{< "a" : Rebec | queue : nil,stateVars :(
+    (Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),
+    toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue :
+    Customer--ticketIssued with emptyValuation from "a" deadline 1000000,
+    stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute
+    : noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 72,'takeMessage}{{< "a" : Rebec | queue : nil,
+    stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self
+    |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" : Rebec | queue
+    : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")(self |->
+    "c1")sender |-> "a"),toExecute :((send Customer--try with noArg to self
+    deadline 1000000 after 30); removeVars(sender |-> "a")),zclassID : Customer
+    > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(Customer-a
+    |-> "a")self |-> "c2"),toExecute : noStatements,zclassID : Customer > <
+    "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue :
+    TicketService--requestTicket with TicketService-id |-> 2 from "a" deadline
+    200,stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |->
+    "a")self |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in
+    time 72,'exec}{{delayedMsg(Customer--try with emptyValuation from "c1" to
+    "c1" deadline 1000000,30)< "a" : Rebec | queue : nil,stateVars :((Agent-c1
+    |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : TicketService--requestTicket with TicketService-id |-> 2
+    from "a" deadline 200,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 72,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 1000000,30)< "a" : Rebec | queue
+    : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-id |->
+    2)(TicketService-issueDelay |-> 4)(TicketService-a |-> "a")(self |->
+    "ts")sender |-> "a"),toExecute :(delay(TicketService-issueDelay);(send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 2)sender |-> "a")),
+    zclassID : TicketService >} in time 72,'delayExpression}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 1000000,30)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :(delay(
+    4);(send Agent--ticketIssued with arg(TicketService-id)to TicketService-a
+    deadline 1000000 after 0); removeVars((TicketService-id |-> 2)sender |->
+    "a")),zclassID : TicketService >} in time 72,'tick}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 999996,26)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :(delay(
+    0);(send Agent--ticketIssued with arg(TicketService-id)to TicketService-a
+    deadline 1000000 after 0); removeVars((TicketService-id |-> 2)sender |->
+    "a")),zclassID : TicketService >} in time 76,'end-delay}{{delayedMsg(
+    Customer--try with emptyValuation from "c1" to "c1" deadline 999996,26)<
+    "a" : Rebec | queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |->
+    "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute : noStatements,zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-id |-> 2)(TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")(self |-> "ts")sender |-> "a"),toExecute :((send
+    Agent--ticketIssued with arg(TicketService-id)to TicketService-a deadline
+    1000000 after 0); removeVars((TicketService-id |-> 2)sender |-> "a")),
+    zclassID : TicketService >} in time 76,'exec}{{delayedMsg(Customer--try
+    with emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec |
+    queue : nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |->
+    "c2"),toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen |
+    nextId : 0 > < "ts" : Rebec | queue : nil,stateVars :((
+    TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService > Agent--ticketIssued
+    with Agent-id |-> 2 from "ts" to "a" deadline 1000000} in time 76,
+    'readMessage}{{delayedMsg(Customer--try with emptyValuation from "c1" to
+    "c1" deadline 999996,26)< "a" : Rebec | queue : Agent--ticketIssued with
+    Agent-id |-> 2 from "ts" deadline 1000000,stateVars :((Agent-c1 |-> "c1")(
+    Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 76,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-id |-> 2)(Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(
+    Agent-ts |-> "ts")(self |-> "a")sender |-> "ts"),toExecute :((if Agent-id =
+    1 then send Customer--ticketIssued with noArg to Agent-c1 deadline 1000000
+    after 0 else send Customer--ticketIssued with noArg to Agent-c2 deadline
+    1000000 after 0); removeVars((Agent-id |-> 2)sender |-> "ts")),zclassID :
+    Agent > < "c1" : Rebec | queue : nil,stateVars :((Customer-id |-> 1)(
+    Customer-a |-> "a")self |-> "c1"),toExecute : noStatements,zclassID :
+    Customer > < "c2" : Rebec | queue : nil,stateVars :((Customer-id |-> 2)(
+    Customer-a |-> "a")self |-> "c2"),toExecute : noStatements,zclassID :
+    Customer > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,
+    stateVars :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self
+    |-> "ts"),toExecute : noStatements,zclassID : TicketService >} in time 76,
+    'exec}{{delayedMsg(Customer--try with emptyValuation from "c1" to "c1"
+    deadline 999996,26)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService > Customer--ticketIssued with emptyValuation from "a" to "c2"
+    deadline 1000000} in time 76,'readMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : Customer--ticketIssued with emptyValuation from "a" deadline
+    1000000,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),
+    toExecute : noStatements,zclassID : Customer > < "idgen" : IdGen | nextId :
+    0 > < "ts" : Rebec | queue : nil,stateVars :((TicketService-issueDelay |->
+    4)(TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID
+    : TicketService >} in time 76,'takeMessage}{{delayedMsg(Customer--try with
+    emptyValuation from "c1" to "c1" deadline 999996,26)< "a" : Rebec | queue :
+    nil,stateVars :((Agent-c1 |-> "c1")(Agent-c2 |-> "c2")(Agent-ts |->
+    "ts")self |-> "a"),toExecute : noStatements,zclassID : Agent > < "c1" :
+    Rebec | queue : nil,stateVars :((Customer-id |-> 1)(Customer-a |-> "a")self
+    |-> "c1"),toExecute : noStatements,zclassID : Customer > < "c2" : Rebec |
+    queue : nil,stateVars :((Customer-id |-> 2)(Customer-a |-> "a")(self |->
+    "c2")sender |-> "a"),toExecute :((send Customer--try with noArg to self
+    deadline 1000000 after 30); removeVars(sender |-> "a")),zclassID : Customer
+    > < "idgen" : IdGen | nextId : 0 > < "ts" : Rebec | queue : nil,stateVars
+    :((TicketService-issueDelay |-> 4)(TicketService-a |-> "a")self |-> "ts"),
+    toExecute : noStatements,zclassID : TicketService >} in time 76,'exec},{{
+    delayedMsg(Customer--try with emptyValuation from "c1" to "c1" deadline
+    999996,26)delayedMsg(Customer--try with emptyValuation from "c2" to "c2"
+    deadline 1000000,30)< "a" : Rebec | queue : nil,stateVars :((Agent-c1 |->
+    "c1")(Agent-c2 |-> "c2")(Agent-ts |-> "ts")self |-> "a"),toExecute :
+    noStatements,zclassID : Agent > < "c1" : Rebec | queue : nil,stateVars :((
+    Customer-id |-> 1)(Customer-a |-> "a")self |-> "c1"),toExecute :
+    noStatements,zclassID : Customer > < "c2" : Rebec | queue : nil,stateVars
+    :((Customer-id |-> 2)(Customer-a |-> "a")self |-> "c2"),toExecute :
+    noStatements,zclassID : Customer > < "idgen" : IdGen | nextId : 0 > < "ts"
+    : Rebec | queue : nil,stateVars :((TicketService-issueDelay |-> 4)(
+    TicketService-a |-> "a")self |-> "ts"),toExecute : noStatements,zclassID :
+    TicketService >} in time 76,'tick})
+
+Bye.
