@@ -40,7 +40,7 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
 				<version>4.3</version>
@@ -60,46 +60,45 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin> -->
+			</plugin>
 
-            <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>jar-with-dependencies</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>single</goal>
-                    </goals>
-                    <configuration>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
-                        <archive>
-                            <manifest>
-                                <mainClass>org.rebecalang.timedrebeca2rtmaude.TimedRebeca2RTMaude</mainClass>
-                                <addClasspath>true</addClasspath>
-                            </manifest>
-                        </archive>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>jar-with-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<archive>
+								<manifest>
+									<mainClass>org.rebecalang.timedrebeca2rtmaude.TimedRebeca2RTMaude</mainClass>
+									<addClasspath>true</addClasspath>
+								</manifest>
+							</archive>
 
-                        <appendAssemblyId>false</appendAssemblyId>
+							<appendAssemblyId>false</appendAssemblyId>
 
-                    </configuration>
-                </execution>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>single</goal>
-                    </goals>
-                    <configuration>
-                        <descriptors>
-                            <descriptor>src/main/assembly/zip.xml</descriptor>
-                        </descriptors>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>			
-			
+						</configuration>
+					</execution>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/main/assembly/zip.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
